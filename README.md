@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma&style=for-the-badge" />
   <img src="https://img.shields.io/badge/PostgreSQL-14-336791?logo=postgresql&logoColor=white&style=for-the-badge" />
   <img src="https://img.shields.io/badge/Material--UI-007FFF?logo=mui&logoColor=white&style=for-the-badge" />
-  <img src="https://img.shields.io/github/license/Hezi777/lumia-image-sharing-app?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/Hezi777/Lumia?style=for-the-badge" />
 </p>
 
 <p align="center">
@@ -88,8 +88,8 @@ Lumia is a full-stack photo sharing web application inspired by Instagram, built
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Hezi777/lumia-image-sharing-app.git
-cd lumia-image-sharing-app
+git clone https://github.com/Hezi777/Lumia.git
+cd Lumia
 ```
 
 ### 2. Install dependencies
