@@ -1,42 +1,51 @@
-<h1 align="center">
-  <img width="300" height="300" alt="Lumia Logo" src="https://github.com/user-attachments/assets/cea168b5-247e-46c7-a645-c8a91cef2ef5" />
-  <br/>
-  <b>Lumia — Image Sharing App</b>
-</h1>
+<h1 align="center"><b>Lumia</b></h1>
 
 <p align="center">
-  A clean, full-stack photo-sharing platform inspired by Instagram.<br/>
-  Upload photos, browse a responsive gallery, and like & comment in real time.
+  A full-stack Instagram-style photo sharing platform built with React, NestJS, and PostgreSQL.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/NestJS-9-E0234E?logo=nestjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma" />
-  <img src="https://img.shields.io/badge/PostgreSQL-14-336791?logo=postgresql" />
-  <img src="https://img.shields.io/badge/Material--UI-007FFF?logo=mui&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/NestJS-9-E0234E?logo=nestjs&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PostgreSQL-14-336791?logo=postgresql&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Material--UI-007FFF?logo=mui&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/Hezi777/lumia-image-sharing-app?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/Hezi777/image-sharing-app?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues/Hezi777/image-sharing-app?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues-pr/Hezi777/image-sharing-app?style=for-the-badge" />
+  <a href="#about">About</a> |
+  <a href="#features">Features</a> |
+  <a href="#screenshots">Screenshots</a> |
+  <a href="#tech-stack">Tech Stack</a> |
+  <a href="#getting-started">Getting Started</a> |
+  <a href="#contributing">Contributing</a>
 </p>
 
 ---
 
-## ✨ Features
+## About
 
-- 📤 **Image Upload** — drag-and-drop with preview & validation  
-- 🖼 **Responsive Gallery** — infinite scroll & image metadata  
-- ❤️ **Likes & Comments** — real-time optimistic updates  
-- 📱 **Mobile-First Design** — works seamlessly on any device  
-- 🔌 **REST API** — structured and documented for easy integration  
+Lumia is a full-stack photo sharing web application inspired by Instagram, built to explore modern full-stack architecture with a React frontend and a NestJS REST API backend. It allows users to upload images via drag-and-drop, browse a responsive infinite-scroll gallery, and engage with posts through likes and comments. The project demonstrates end-to-end integration of a typed ORM (Prisma), relational database (PostgreSQL), and a component-driven React UI.
 
 ---
-## 📸 Screenshots
 
-Below are all the available screenshots showcasing Lumia's features and interface.  
+## Features
+
+| Area | Description |
+|------|-------------|
+| Image Upload | Drag-and-drop interface with live preview and file type/size validation |
+| Gallery | Responsive grid layout with infinite scroll and image metadata display |
+| Likes and Comments | Optimistic UI updates for likes and per-image comment threads |
+| User Profiles | Personal gallery grid with post stats and inline username editing |
+| Dark Mode | Toggleable dark theme with persistent user preference |
+| Mobile-First Design | Fully responsive layout across all screen sizes |
+| REST API | Structured backend endpoints for images, likes, and comments |
+
+---
+
+## Screenshots
+
 *(Demo content generated with sample travel and lifestyle images for presentation purposes.)*
 
 | Home Gallery (Infinite Scroll) | Image Upload Interface |
@@ -50,49 +59,50 @@ Below are all the available screenshots showcasing Lumia's features and interfac
 | Registration | Dark Mode Theme |
 |--------------|----------------|
 | ![Register](frontend/public/Screenshots/RegisterPage.png) | ![Dark Mode](frontend/public/Screenshots/DarkMode.png) |
-=======
 
 ---
 
-### **Screenshot Details**
-1. **Gallery.gif** — Infinite scroll functionality showing images loading dynamically as user scrolls  
-2. **UploadPage.png** — Drag & drop upload interface with preview, description field, and file validation  
-3. **LoginPage.png** — Clean Material-UI authentication screen with glassmorphism styling  
-4. **RegisterPage.png** — User registration form with password confirmation validation  
-5. **ProfilePage.png** — Personal gallery grid with post stats and inline username editing  
-6. **DarkMode.png** — Dark theme toggle with persistent preference and modern UI styling
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 19, TypeScript, Material-UI, React Router, Axios |
+| Backend | NestJS 9, TypeScript, Prisma ORM, Multer |
+| Database | PostgreSQL 14 |
+| Storage | Local filesystem (`uploads/`) |
 
 ---
 
-## 🛠 Tech Stack
+## Getting Started
 
-| Layer     | Technology |
-|-----------|------------|
-| **Frontend** | React 19, TypeScript, Material-UI, React Router, Axios |
-| **Backend**  | NestJS 9, TypeScript, Prisma ORM, Multer |
-| **Database** | PostgreSQL 14 |
-| **Storage**  | Local filesystem (`uploads/`) |
+### Prerequisites
 
----
+- Node.js 18+
+- PostgreSQL 14+
+- npm
 
-## 🚀 Getting Started
+### 1. Clone the repository
 
-### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourname/lumia.git
-cd lumia
+git clone https://github.com/Hezi777/lumia-image-sharing-app.git
+cd lumia-image-sharing-app
 ```
 
-### 2️⃣ Configure Environment Variables
-```bash
-# Backend
-cp backend/.env.example backend/.env
+### 2. Install dependencies
 
-# Frontend
+```bash
+npm install --prefix backend
+npm install --prefix frontend
+```
+
+### 3. Configure environment
+
+```bash
+cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-**Backend `.env`**
+**`backend/.env`**
 ```env
 DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"
 PORT=3001
@@ -100,87 +110,36 @@ UPLOAD_DIR="./uploads"
 CORS_ORIGIN="http://localhost:5173"
 ```
 
-**Frontend `.env`**
+**`frontend/.env`**
 ```env
 VITE_API_URL="http://localhost:3001"
 ```
 
-### 3️⃣ Install Dependencies
-```bash
-npm install --prefix backend
-npm install --prefix frontend
-```
+### 4. Run the app
 
-### 4️⃣ Setup Database
 ```bash
+# Apply database migrations
 npm run prisma:migrate:dev --prefix backend
-```
 
-### 5️⃣ Start Development
-```bash
-# Backend
+# Start backend (http://localhost:3001)
 npm run start:dev --prefix backend
 
-# Frontend
+# Start frontend (http://localhost:5173)
 npm start --prefix frontend
 ```
 
 ---
 
-## 📜 API Endpoints
+## Contributing
 
-| Method | Endpoint                 | Description          |
-|--------|--------------------------|----------------------|
-| POST   | `/images/upload`          | Upload a new image   |
-| GET    | `/images`                 | List all images      |
-| POST   | `/images/:id/like`        | Like/unlike an image |
-| POST   | `/images/:id/comment`     | Add a comment        |
-
----
-
-## 🗄 Database Schema (Prisma)
-
-```prisma
-model Image {
-  id           Int       @id @default(autoincrement())
-  filename     String
-  originalName String
-  url          String
-  createdAt    DateTime  @default(now())
-  likes        Int       @default(0)
-  comments     Comment[]
-}
-
-model Comment {
-  id         Int      @id @default(autoincrement())
-  imageId    Int
-  text       String
-  createdAt  DateTime @default(now())
-  image      Image    @relation(fields: [imageId], references: [id])
-}
-```
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a Pull Request
 
 ---
 
-## 🤝 Contributing
+## License
 
-1. **Fork** the repository  
-2. Create your **feature branch**  
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. **Commit** changes  
-   ```bash
-   git commit -m "Add feature"
-   ```
-4. **Push** to your branch  
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. Open a **Pull Request**
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
