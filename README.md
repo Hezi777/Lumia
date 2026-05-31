@@ -1,4 +1,8 @@
-<h1 align="center"><b>Lumia</b></h1>
+<h1 align="center">
+  <img width="200" height="200" alt="Lumia Logo" src="https://github.com/user-attachments/assets/cea168b5-247e-46c7-a645-c8a91cef2ef5" />
+  <br />
+  <b>Lumia</b>
+</h1>
 
 <p align="center">
   A full-stack Instagram-style photo sharing platform built with React, NestJS, and PostgreSQL.
