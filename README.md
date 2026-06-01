@@ -30,7 +30,7 @@
 
 ## About
 
-Lumia is a full-stack photo sharing web application inspired by Instagram, built to explore modern full-stack architecture with a React frontend and a NestJS REST API backend. It allows users to upload images via drag-and-drop, browse a responsive infinite-scroll gallery, and engage with posts through likes and comments. The project demonstrates end-to-end integration of a typed ORM (Prisma), relational database (PostgreSQL), and a component-driven React UI.
+Lumia is a full-stack photo sharing app built with React and NestJS. Upload images with drag-and-drop, browse an infinite-scroll gallery, and interact through likes and comments. Built to demonstrate end-to-end integration between a React frontend, a NestJS REST API, Prisma ORM, and PostgreSQL.
 
 ---
 
@@ -43,7 +43,7 @@ Lumia is a full-stack photo sharing web application inspired by Instagram, built
 | Likes and Comments | Optimistic UI updates for likes and per-image comment threads |
 | User Profiles | Personal gallery grid with post stats and inline username editing |
 | Dark Mode | Toggleable dark theme with persistent user preference |
-| Mobile-First Design | Fully responsive layout across all screen sizes |
+| Mobile-First Design | Fully responsive across all screen sizes |
 | REST API | Structured backend endpoints for images, likes, and comments |
 
 ---
@@ -79,34 +79,19 @@ Lumia is a full-stack photo sharing web application inspired by Instagram, built
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18+
-- PostgreSQL 14+
-- npm
-
-### 1. Clone the repository
+**Prerequisites:** Node.js 18+, PostgreSQL 14+
 
 ```bash
 git clone https://github.com/Hezi777/Lumia.git
 cd Lumia
-```
-
-### 2. Install dependencies
-
-```bash
 npm install --prefix backend
 npm install --prefix frontend
-```
-
-### 3. Configure environment
-
-```bash
 cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-**`backend/.env`**
+Fill in `backend/.env`:
+
 ```env
 DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=public"
 PORT=3001
@@ -114,23 +99,21 @@ UPLOAD_DIR="./uploads"
 CORS_ORIGIN="http://localhost:5173"
 ```
 
-**`frontend/.env`**
+Fill in `frontend/.env`:
+
 ```env
 VITE_API_URL="http://localhost:3001"
 ```
 
-### 4. Run the app
+Then start everything:
 
 ```bash
-# Apply database migrations
 npm run prisma:migrate:dev --prefix backend
-
-# Start backend (http://localhost:3001)
 npm run start:dev --prefix backend
-
-# Start frontend (http://localhost:5173)
 npm start --prefix frontend
 ```
+
+Frontend: http://localhost:5173 | API: http://localhost:3001
 
 ---
 
@@ -146,4 +129,4 @@ npm start --prefix frontend
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+MIT - see the [LICENSE](LICENSE) file for details.
